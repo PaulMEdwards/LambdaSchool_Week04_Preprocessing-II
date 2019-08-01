@@ -1,3 +1,10 @@
+header {
+  margin-top: 2.5em;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed @navigation-border;
+}
+
 .home {
 
   .content-section {
@@ -5,8 +12,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    
+    .text-content-full {
+      width: 100%;
+      padding-right: 1%;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed @navigation-border;
+    }
     
     .text-content {
       width: 48%;
@@ -56,6 +68,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .btn(85%, 10px);
+      }
     }
   }
 }// home
