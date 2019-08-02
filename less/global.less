@@ -3,10 +3,11 @@
 }
 
 html {
-  font-size: 62.5%;
+  // font-size: 62.5%;
+  font-size: calc(50% + 0.25vw);
 }
 
-html, body {
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -40,7 +41,27 @@ img {
 }
 
 .container {
-  max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @mobile {
+    padding: 0 @padding-mobile;
+    min-width: calc(@max-width-mobile / 2);
+    max-width: @max-width-mobile;
+  }
+  @media @tablet {
+    padding: 0 @padding-tablet;
+    min-width: calc(@max-width-tablet / 2);
+    max-width: @max-width-tablet;
+  }
+  @media @desktop {
+    padding: 0 @padding-desktop;
+    min-width: calc(@max-width-desktop / 2);
+    max-width: @max-width-desktop;
+  }
+  @media @desktop4k {
+    padding: 0 @padding-desktop4k;
+    min-width: calc(@max-width-desktop4k / 2);
+    max-width: @max-width-desktop4k;
+  }
 }

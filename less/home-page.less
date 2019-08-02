@@ -7,6 +7,10 @@ header {
 
 .home {
 
+  img {
+    width: 100%;
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -22,11 +26,17 @@ header {
     
     .text-content {
       width: 48%;
+      @media @mobile {
+        width: 100%;
+      }
       padding-right: 1%;
     }
 
     .img-content {
       width: 48%;
+      @media @mobile {
+        width: 100%;
+      }
       padding-left: 1%;
 
       img {
@@ -36,6 +46,12 @@ header {
   }
 
   .inverse-content {
+    display: flex;
+    flex-direction: row;
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
+
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
@@ -52,6 +68,9 @@ header {
 
   .content-destination {
     width: 75%;
+    @media @mobile {
+      width: 100%;
+    }
     margin: 0 auto 30px;
 
     img {
@@ -62,15 +81,28 @@ header {
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5vw;
+    @media @mobile {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
 
     .destination {
-      width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 75%;
+        margin: 0 auto 30px;
+      }
 
       .btn {
         .btn(85%, 10px);
+        @media @mobile {
+          .btn(100%, 10px);
+        }
       }
     }
   }
