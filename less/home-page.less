@@ -82,13 +82,10 @@ header {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
 
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 5vw;
+    .grid(1fr, 1fr 1fr 1fr);
+    .grid(@rows, @columns);
     @media @mobile {
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr;
+      .grid(1fr 1fr 1fr, 1fr);
     }
 
     .destination {

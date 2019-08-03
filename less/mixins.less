@@ -9,3 +9,11 @@
   font-size: @fontsize;
   font-weight: @fontweight;
 }
+
+.grid(@rows, @columns, @rowgap: 5vw, @columngap: 5vw) {
+  display: grid;
+  grid-template-rows: @rows;
+  grid-template-columns: @columns;
+  grid-row-gap: @rowgap;
+  grid-column-gap: @columngap;
+}
