@@ -1,1 +1,45 @@
-// Navigation Styles here
+nav {
+  margin: 0 auto;
+
+  @media @mobile {
+    padding: 0 @padding-mobile;
+    min-width: calc(@max-width-mobile / 2);
+    max-width: @max-width-mobile;
+  }
+  @media @tablet {
+    padding: 0 @padding-tablet;
+    min-width: calc(@max-width-tablet / 2);
+    max-width: @max-width-tablet;
+  }
+  @media @desktop {
+    padding: 0 @padding-desktop;
+    min-width: calc(@max-width-desktop / 2);
+    max-width: @max-width-desktop;
+  }
+  @media @desktop4k {
+    padding: 0 @padding-desktop4k;
+    min-width: calc(@max-width-desktop4k / 2);
+    max-width: @max-width-desktop4k;
+  }
+
+  grid-column-gap: 5vw;
+  .grid(1fr, 1fr 1fr);
+  @media @mobile {
+    .grid(1fr 1fr, 1fr);
+    text-align: center;
+  }
+  
+  div:last-child {
+    .grid(1fr, 1fr 1fr 1fr 1fr);
+
+    a {
+      line-height: 1.5;
+      font-size: 1.6rem;
+      padding: 5px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      vertical-align: center;
+    }
+  }
+}
